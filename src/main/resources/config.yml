@@ -1,0 +1,78 @@
+time: 900
+minPlayer: 4
+maxPlayer: 22
+prepareTime: 120
+teamAColor: "b"
+teamBColor: "c"
+audienceColor: "a"
+world: "world"
+teamARoom:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+teamBRoom:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+audienceRoom:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+playgroundStart:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+playgroundEnd:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+teamAGoalStart:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+teamAGoalEnd:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+teamBGoalStart:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+teamBGoalEnd:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+center:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angleA1:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angleA2:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angleB1:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angleB2:
+  ==: Vector
+  x: 0.0
+  y: 0.0
+  z: 0.0

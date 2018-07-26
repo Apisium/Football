@@ -1,0 +1,51 @@
+football: "&a&lFootBall"
+boosBar: "%s vs %s : %s%d &r/ %s%d"
+actionBar: "Time: &a%s &e&l| &rLeft: &a%s &e&l| &r&aYou are %s"
+teamA: "BLUE"
+teamB: "RED"
+audience: "AUDIENCE"
+win: "&aWIN"
+defeat: "&cDEFEAT"
+draw: "&bDRAW"
+title:
+  countDown:
+    main: "&e&l%d"
+    start: "&aSTART!"
+  start:
+    main: "&eGAME STARTS!"
+    sub: "Served by %s!"
+  goal:
+    main: "%s&r&e GOAL IN!"
+    sub: "By %s"
+  out:
+    main: "&eBALL WAS OUT!"
+    sub: "By %s"
+  end:
+    main: "&eTIMEOUT!"
+    sub: "You %s"
+log:
+  started: "&cThe game has started! &ePlease wait for the next match."
+  inPreparation: "&aYou have joined the %s&a! &eWaiting for other players."
+  hasItems: "&cYour backpack is not empty, please clear your backpack!"
+  full: "&cThe number of players in the game is full! &ePlease wait for the next match."
+  notEnough: "&cThe match time is over, but the number of games is not enough."
+  replace: "%s&e was moved to %s&e because of large difference of the number of players between two groups."
+  wait: "&eThe game is about to start! &aPlease wait for the start signal..."
+  start: "&eThis game will be served by %s&e!"
+  competition: "&aCompetition is over! %s vs %s : %s%d / %s%d"
+  goal: "&d&lGoal! &r&eThe next ball will be served by %s&e!"
+  out: "&d&lBall was out! &r&eThe next ball will be served by %s&e!"
+  left: "&aYou have left the team!"
+item:
+  stick0:
+    name: "&eKick (Default) &c1"
+    lore: "\n&b&lI'm a big &cSTICK.\n&aYou can use me to play football, but you can't use me to &ctouch fish&a.\n&aSo let's play happily with the boy next door!"
+  stick1:
+    name: "&eKick (Faster) &c2"
+    lore: "\n&b&lI'm a big &cSTICK.\n&aYou can use me to play football, but you can't use me to &ctouch fish&a.\n&aSo let's play happily with the boy next door!"
+  stick2:
+    name: "&eKick (Fastest) &c3"
+    lore: "\n&b&lI'm a big &cSTICK.\n&aYou can use me to play football, but you can't use me to &ctouch fish&a.\n&aSo let's play happily with the boy next door!"
+  stick3:
+    name: "&eKick (Higher!) &c4"
+    lore: "\n&b&lI'm a big &cSTICK.\n&aYou can use me to play football, but you can't use me to &ctouch fish&a.\n&aSo let's play happily with the boy next door!"

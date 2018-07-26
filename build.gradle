@@ -1,0 +1,66 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+group = project.property('group')
+version = project.property('version')
+
+buildscript {
+  ext.kotlin_version = '1.2.51'
+
+  repositories {
+    jcenter()
+    mavenCentral()
+    maven { url = 'http://maven.elmakers.com/repository' }
+    maven { url = 'http://repo.dmulloy2.net/content/groups/public' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public' }
+  }
+
+  dependencies {
+    classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
+
+repositories {
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
+  maven { url = 'http://maven.elmakers.com/repository' }
+  maven { url = 'http://repo.dmulloy2.net/content/groups/public' }
+  maven { url = 'https://hub.spigotmc.org/nexus/content/groups/public' }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'kotlin'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+dependencies {
+  compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8', version: kotlin_version
+  compileOnly files('lib/Mingames-Api.jar')
+  compileOnly group: 'org.spigotmc', name: 'spigot-api', version: project.property('apiversion')
+  compileOnly (group: 'com.github.UnknownStudio', name: 'UDPLib', version: '1.3.0-SNAPSHOT') {
+    exclude group: 'com.comphenix.protocol'
+  }
+}
+
+processResources {
+  filter ReplaceTokens, tokens: [
+    name: rootProject.name,
+    author: project.property('author'),
+    version: project.property('version'),
+    website: project.property('website'),
+    apiversion: project.property('apiversion'),
+    description: project.property('description'),
+    main: project.property('group') + '.' + project.property('main')
+  ]
+}
+
+task copyPlugin (type: Copy, dependsOn: ['shadowJar']) {
+  from "$buildDir/libs"
+  into 'testServer/plugins'
+}
